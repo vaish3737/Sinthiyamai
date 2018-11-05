@@ -1,0 +1,27 @@
+   nav{
+		background-color: #062f4f;
+		margin:0;
+		padding:0;
+		overflow: hidden;
+	}
+
+	a{
+		display: inline-block;
+		padding: 10px 16px;
+		text-decoration: none;
+		color:white;
+		font-family: 'Baloo Tammudu', cursive;
+		font-size: 1.5vw;
+	}
+
+	 body{
+          	background-image: url(../Images/image1.jpg);
+          }
+
+	nav a:active {
+		background-color: red;
+	}
+
+	nav a:hover{
+		background-color: purple;
+	}

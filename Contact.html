@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./Styles/new.css">
+	<style type="text/css">
+		
+		html{
+			height: 100%;
+		}
+     
+     input{
+     	border:1px solid black;
+     	padding-bottom: 20px;
+     	width:40%;
+     }
+     .form{
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: auto;
+     margin-top: auto;
+     width:50%;
+     	
+     }
+		
+		select{
+			width:100%;
+		}
+	</style>
+
+	<script>
+		function populate(s1,s2){
+			var s1=document.getElementById('Count');
+			var s2=document.getElementById('stat');
+
+			
+			s2.innerhtml=" ";
+			
+
+			if(s1.value == "India"){
+				
+				var optionArray=["|","TamilNadu|TamilNadu","AP|AP","Karanataka|Karnataka","Kerala|Kerala"];
+			}
+				else if(s1.value == "United States"){
+				var optionArray=["|","Texas|Texas","Florida|Florida","Minnesota|Minnesota"];
+			}
+
+
+				else if(s1.value == "Canada"){
+				var optionArray=["|","Alberta|Alberta","Quebec|Quebec","Toronto|Toronto"];
+			}
+
+			for (var option in optionArray){
+				var pair=optionArray[option].split("|");
+				var newOption=document.createElement("option");
+				newOption.value=pair[0];
+				newOption.innerHTML=pair[1];
+				s2.options.add(newOption);
+				console.log(s2.innerhtml);
+
+			}
+			
+		}
+	</script>
+	<title>Contact</title>
+</head>
+<body>
+<nav>
+      <a href="index.html">Sinthiyamai </a>
+      <a href="Posts.html">Posts</a>
+      <a href="#">Contact</a>
+      <a href="Feedback.html">Feedback</a>
+      </nav>
+	
+  <div class='form'>
+	<input type="text" placeholder="Username" name='username'></input><br>
+	<input type="text" placeholder="Password" name='password'></input><br>
+	<h5>Country</h5>
+	<select id='Count' name='country' onchange="populate('Count','stat')">
+		<option value='' id='Count' ></option>
+		<option value='United States' id='Count' >US</option>
+		<option value='India' id='Count'>India</option>
+		<option value='Canada' id='Count'>Canada</option>
+		
+	</select><hr/>
+	<h5>State</h5>
+	<select id='stat' name='state'>
+		
+	</select>
+	<button type="sumbit">Login</button>
+
+	<script>
+		
+	</script>
+</div>
+</body>
+</html>
+
+
+<!-- <script>
+function testfun() {
+    var pwd1,pwd2;
+
+    // Get the value of the input field with id="numb"
+    pwd1 = document.getElementByName("password").value;
+    pwd2 = document.getElementByName("password2").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (pwd1!=='' || pwd2=='') {
+        text = "Fillout values";
+    } 
+        if(pwd1==pwd2){
+        text = "Input OK";
+    }
+    else{
+        text = "Input mismatch"; 
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script> -->
